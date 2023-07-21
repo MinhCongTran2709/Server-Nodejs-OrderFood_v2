@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const app = express();
 const cors = require('cors');
 const methodOverride= require('method-override');
-const db = require('./config');
+const db = require('./config/connectDB');
 const route = require('./routes');
 
 const port = 5000
