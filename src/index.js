@@ -21,3 +21,6 @@ app.listen(port, () =>{
 })
 
 route(app)
+app.get("/", (req, res) =>{
+    res.send("Hello, server")
+})

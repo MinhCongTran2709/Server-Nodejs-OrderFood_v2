@@ -5,9 +5,10 @@ const Schema = mongoose.Schema;
 const Order = new Schema({
     customerId: {
         type: Schema.Types.ObjectId,
+        ref: "customers"
     },
 
-    customerFullName: {
+    fullName: {
         type: String,
     },
 
@@ -23,10 +24,12 @@ const Order = new Schema({
         {
             productId: {
                 type: Schema.Types.ObjectId,
+                ref: "products"
             },
 
             productName: {
                 type: Schema.Types.String,
+                ref: "products"
             },
 
             quanlity: {
@@ -34,7 +37,8 @@ const Order = new Schema({
             },
 
             unitPrice: {
-                type: Number,
+                type: Schema.Types.Number,
+                ref: "products"
             }
         }
     ],

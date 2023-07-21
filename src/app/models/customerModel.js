@@ -15,6 +15,10 @@ const Customer = new Schema({
         default: null,
     },
 
+    username: {
+        type: String,
+    },
+
     fullName: {
         type: String
     },
